@@ -1,6 +1,7 @@
 import '../assets/css/core.css'
-import { SquareUserRound } from 'lucide-react';
-import {Link,NavLink} from 'react-router-dom'
+import { SquareUserRound,Cross} from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react'
+import {NavLink} from 'react-router-dom'
  const Navbar = () => {
     const NavLinks=[
       {
@@ -18,6 +19,14 @@ import {Link,NavLink} from 'react-router-dom'
 
       }
     ]
+    const [data,setdata]=useState(null)
+
+    useEffect(()=>{
+        console.log("UseEffect called")
+    },[data])
+   
+
+    
   return (
     <>
         <div className="grad-bg-nav shadow-xl w-full h-[10vh] flex drop-shadow-2xl ">
@@ -48,13 +57,10 @@ import {Link,NavLink} from 'react-router-dom'
              </div>
             
             <div className="flex justify-center items-center text-white w-[5vw]">
-            <SquareUserRound size={30}/>
+            <SquareUserRound  className="h-8 w-9 hover:rounded-full  hover:bg-pink-400" onClick={() => setvisible(true)}/>
             </div>
-            
-              
-            
-          
         </div>
+        
     </>
   )
 }
