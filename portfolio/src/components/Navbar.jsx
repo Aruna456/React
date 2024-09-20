@@ -1,5 +1,5 @@
 import '../assets/css/core.css'
-import { SquareUserRound,Cross} from 'lucide-react';
+import { SquareUserRound,X} from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react'
 import {NavLink} from 'react-router-dom'
  const Navbar = () => {
@@ -14,18 +14,14 @@ import {NavLink} from 'react-router-dom'
 
       },
       {
-        title:"Contacts",
+        title:"Contact",
         path:"/Contacts"
 
       }
     ]
-    const [data,setdata]=useState(null)
+    const [visible,setvisible]=useState(false)
 
-    useEffect(()=>{
-        console.log("UseEffect called")
-    },[data])
-   
-
+  
     
   return (
     <>
@@ -57,11 +53,35 @@ import {NavLink} from 'react-router-dom'
              </div>
             
             <div className="flex justify-center items-center text-white w-[5vw]">
-            <SquareUserRound  className="h-8 w-9 hover:rounded-full  hover:bg-pink-400" />
+            <SquareUserRound  className="cursor-pointer h-8 w-9 hover:rounded-full hover:p-1 hover:bg-pink-400" onClick={()=>setvisible(true)} />
             </div>
         </div>
-        
+        {
+          visible&&(
+            <>
+            <div className=" h-screen w-screen flex justify-center items-center bg-black/60 absolute z-10">
+              <div className=" bg-white  w-[30%]  h-[50%] shadow-lg">
+              <div className="h-[9vh] flex justify-center gap-8 text-grad-color-left list-none font-bold text-2xl rounded-lg shadow-lg drop-shadow-lg items-center">
+             <li className="w-1/2 flex justify-center">
+              Login
+             </li>
+             <li className="w-1/2 flex  p-3 justify-end">
+              <X onClick={()=>{setvisible(!visible)}}/>
+             </li>
+              </div>
+            
+              </div>
+
+            </div>
+            </>
+        )
+      }
+         
     </>
+   
+      
+      
+    
   )
 }
 export default Navbar

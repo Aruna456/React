@@ -38,11 +38,7 @@ import {Link} from "react-router-dom"
               </Link>
             </ul>
             </div>
-            
-            
           </div>
-
-
            </div>
            
         </>
