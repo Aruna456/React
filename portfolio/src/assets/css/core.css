@@ -42,3 +42,8 @@ background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, F
     padding: 10px;
     border-radius: 50px;
 }
+
+.button-bg
+{
+    background-color: #FF0099;
+}

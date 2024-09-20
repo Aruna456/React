@@ -57,7 +57,7 @@ import {NavLink} from 'react-router-dom'
              </div>
             
             <div className="flex justify-center items-center text-white w-[5vw]">
-            <SquareUserRound  className="h-8 w-9 hover:rounded-full  hover:bg-pink-400" onClick={() => setvisible(true)}/>
+            <SquareUserRound  className="h-8 w-9 hover:rounded-full  hover:bg-pink-400" />
             </div>
         </div>
         
