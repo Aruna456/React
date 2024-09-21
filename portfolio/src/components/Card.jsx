@@ -23,7 +23,7 @@ const Card = ({ data }) => {
       } */}
       {data.map((project,index)=>
       (
-        <div class="relative flex w-80 mt-8 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md" key={index}>
+        <div class="relative flex w-80 mt-8 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md" key={index} >
           <div class="mx-4 -mt-6 h-40 rounded-xl  bg-clip-border text-black shadow-lg shadow-blue-gray-500/40 ">
           Project Image
           </div>

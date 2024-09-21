@@ -14,7 +14,7 @@ import react from '../assets/img/physics.png'
   return (
        <>
      
-     <div className="w-screen h-[80vh] flex">
+     <div className="w-screen h-[80vh] flex ">
      <div className="flex w-1/2 h-[80vh] flex-col justify-center">
           <div className="px-28 font-extrabold text-5xl">
             <span className="text-grad-color-left">Hii!! </span>
@@ -31,7 +31,7 @@ import react from '../assets/img/physics.png'
               Here are the <span className="font-bold text-pink-600">SKILLS</span> I bring to the table:
             </div>
         </div>
-        <div className="flex w-1/2 flex-col justify-center items-center">
+        <div className="flex w-1/2 flex-col justify-center items-center  ">
         <img src={Arunaimg} alt="Aruna's Image" className="h-[50vh] border-3 shadow-2xl drop-shadow-2xl shadow-black rounded-full"/>
         </div>
      </div>
@@ -48,6 +48,9 @@ import react from '../assets/img/physics.png'
         <li><img src={mongodb} alt="MongoDB" /></li>
       </ul>
     {/* </div> */}
+
+  
+     
      </>
    
   )

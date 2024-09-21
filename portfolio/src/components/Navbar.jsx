@@ -25,7 +25,7 @@ import {NavLink} from 'react-router-dom'
     
   return (
     <>
-        <div className="grad-bg-nav shadow-xl w-full h-[10vh] flex drop-shadow-2xl ">
+        <div className="grad-bg-nav shadow-xl w-full h-[10vh] flex drop-shadow-2xl  ">
           <div className="flex justify-start flex-row  w-1/2 p-8 items-center text-xl font-bold text-white "> 
             Aruna Subramanian
           </div>
@@ -52,14 +52,15 @@ import {NavLink} from 'react-router-dom'
              </ul>*/}
              </div>
             
-            <div className="flex justify-center items-center text-white w-[5vw]">
+            <div className="flex justify-center items-center text-white w-[5vw]  ">
             <SquareUserRound  className="cursor-pointer h-8 w-9 hover:rounded-full hover:p-1 hover:bg-pink-400" onClick={()=>setvisible(true)} />
+         
             </div>
         </div>
         {
           visible&&(
             <>
-            <div className=" h-screen w-screen flex justify-center items-center bg-black/60 absolute z-10">
+           <div className=" h-screen w-screen flex justify-center items-center bg-black/60 absolute z-10">
               <div className=" bg-white  w-[30%]  h-[50%] shadow-lg">
               <div className="h-[9vh] flex justify-center gap-8 text-grad-color-left list-none font-bold text-2xl rounded-lg shadow-lg drop-shadow-lg items-center">
              <li className="w-1/2 flex justify-center">
@@ -69,10 +70,17 @@ import {NavLink} from 'react-router-dom'
               <X onClick={()=>{setvisible(!visible)}}/>
              </li>
               </div>
+              <div className='w-[50vh] flex-col  items-center flex'>
+                <input type="email" name="email" id="email" placeholder='Email' className=' bg-none text-black focus:outline-none border-b-rose-600' required/>
+                <input type="password" name="pwd" id="pwd" placeholder='Password' className=' bg-none text-black focus:outline-none border-b-rose-600' required/>
+              </div>
+              <div className=''>
+                 <button type="submit" className='' >Submit</button>
+              </div>
             
               </div>
 
-            </div>
+            </div> 
             </>
         )
       }

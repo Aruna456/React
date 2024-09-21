@@ -1,4 +1,4 @@
-
+// import Mq from "./pages/mq"
 
 import Profile from './pages/Profile'
 import Contact from './pages/Contact'
@@ -20,7 +20,7 @@ function App() {
        </Routes>
       </BrowserRouter>
     </div>
-      
+    
      
     </>
   )
