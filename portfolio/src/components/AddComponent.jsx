@@ -1,6 +1,6 @@
 import { Plus, X } from 'lucide-react'
 import { useState,useRef } from 'react'
-import { addProject } from '../services/api'
+import { addProject, getProject } from '../services/api'
 
 const AddComponent = ({fetchproject}) => {
 
@@ -9,37 +9,32 @@ const AddComponent = ({fetchproject}) => {
     const linkref=useRef(null)
     const imgref=useRef(null)
 
-    const handleAdd= async (e)=>{
-
-        e.preventdefault()
+    const handleAdd =async (e)=>{
+        e.preventDefault()
         const projectdata={
-            title:titleref.current.value,
-            desc:descref.current.value,
-            link:linkref.current.value,
-            img:imgref.current.value
+            title: titleref.current.value,
+            desc: descref.current.value,
+            link: linkref.current.value,
+            coverimg: imgref.current.value
         }
-
-        console.log(projectdata)
-
+    
         try{
-             const response =await addProject(projectdata)
-             if(response.status===201)
-             {
-                console.log("Project Added")
-             }
-             fetchproject()
+          const response =await addProject(id,projectdata)
+          if(response.status===200)
+          {
+            console.log("Added")
+            alert("Added")
+          }
+          fetchproject()
         }
-        catch(error){
-             
-            console.log("Error")
-            
-        } 
-
-       setvisible(!visible)
-        console.log("Returned");
-        
-
-    }
+      catch(error)
+      {
+        console.warn("Error")
+        alert("Error")
+    
+      }
+      setvisible(false)
+       }
 
 
 
@@ -62,7 +57,7 @@ const AddComponent = ({fetchproject}) => {
                                 <div className="w-full h-[85%] flex flex-row justify-center items-center">
                                     
                                     <form className="w-[80%] h-[80%] flex flex-col justify-center items-center gap-4"
-                                    onSubmit={()=>{console.log("Button")}}>
+                                    onSubmit={handleAdd}>
                                   
                                         <input type="text"  ref={titleref} name="title" id="title" placeholder="Title" className="p-3 bg-[#f8f8f8] w-full font-bold outline-none active:outline-none focus:border-b-2 hover:border-b-2 hover:border-pink-200  focus:border-pink-600" required />
                                         <input type="text" ref={descref} name="desc" id="desc" placeholder="Desc" className="p-3 bg-[#f8f8f8] w-full font-bold outline-none active:outline-none focus:border-b-2  hover:border-b-2 hover:border-pink-200 focus:border-pink-600 mb-3" required />

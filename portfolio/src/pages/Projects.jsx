@@ -62,15 +62,15 @@ const Projects = () => {
       <AddComponent fetchproject={fetchproject}/>
       </div>
          
-      <div className="font-bold text-grad-color-left font-sans text-2xl flex justify-center w-full h-[20vh] items-center">
+      <div className="font-bold text-grad-color-left font-sans text-2xl flex justify-center w-full h-[5vh] items-center">
         Project Galaxy
       </div>
         
-        <div className="flex flex-row gap-20">
+        <div className="flex flex-row justify-center items-center flex-wrap gap-8">
            {
             projectdata.map((data,index)=>(
 
-              <Card title={data.title} desc={data.desc} key={index}  img={data.coverimg}  link={data.link}/>
+              <Card title={data.title} desc={data.desc} key={index}  img={data.coverimg}  link={data.link} fetchproject={fetchproject}/>
 
             ))
           }
