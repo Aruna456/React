@@ -60,7 +60,7 @@ import {NavLink} from 'react-router-dom'
         {
           visible&&(
             <>
-           <div className=" h-screen w-screen flex justify-center items-center bg-black/60 absolute z-10">
+            <div className=" h-screen w-screen flex justify-center items-center bg-black/60 absolute z-10">
               <div className=" bg-white  w-[30%]  h-[50%] shadow-lg">
               <div className="h-[9vh] flex justify-center gap-8 text-grad-color-left list-none font-bold text-2xl rounded-lg shadow-lg drop-shadow-lg items-center">
              <li className="w-1/2 flex justify-center">

@@ -1,19 +1,23 @@
 
 import Card from "../components/Card"
+import Khelospot from "../assets/img/khelospot.png"
+import PulseRx from "../assets/img/pulseRx.png"
+import ExpenZa from "../assets/img/Expenza.png"
 const Projects = () => {
 
   const Projectdata = [{
-  
+
+    image:Khelospot,
     title: "KheloSpot",
     description: "Online sport event registration platform using HTML,CSS"
   },
   {
-  
+    image:PulseRx,
     title: "PulseRx",
     description: "Pharmacy Management System using Php and MySQL"
   },
   {
- 
+    image:ExpenZa,
     title: "Expenza",
     description: "Expense Tracking application using MERN Stack"
   }
